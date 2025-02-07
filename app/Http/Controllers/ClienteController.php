@@ -18,8 +18,9 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $data = $this->repository->selectAll();
-        return $data;
+        $clientes = $this->repository->selectAll();
+        //return $data;
+        return view('cliente.index', compact('clientes'));
 
     }
 
@@ -28,7 +29,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        //
+        return view('cliente.create');
     }
 
     /**
