@@ -34,6 +34,7 @@
                     <td>{{ $cliente->cpf }}</td>
                     <td>{{ $cliente->email }}</td>
                     <td>
+                        <a href="#">Ver mais</a>
                         <a href="{{ route('cliente.edit', $cliente->id) }}">Editar</a> | 
                         <form action="{{ route('cliente.destroy', $cliente->id) }}" method="POST" style="display:inline;">
                             @csrf

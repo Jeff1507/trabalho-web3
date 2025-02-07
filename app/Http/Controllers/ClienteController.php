@@ -39,6 +39,7 @@ class ClienteController extends Controller
     {
         $obj = new Cliente();
         $obj->nome = mb_strtoupper($request->nome, 'UTF-8');
+        $obj->telefone = $request->telefone;
         $this->repository->save($obj);
         return "<h1>Store - OK!</h1>";
     }
